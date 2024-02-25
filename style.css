@@ -1,0 +1,745 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, input {
+    font-family: "Merriweather", sans-serif;
+}
+
+h1, h2 {
+    font-size: 3rem;
+}
+
+body {
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    padding: 2rem 2rem;
+}
+
+/* LINKS */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover, .dropbtn:hover, .dropdown_content a:hover {
+    color: purple;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.links a {
+    font-size: .4rem;
+    padding: 5px;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    margin: 0;
+    height: max-content;
+    background-position: center;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20vh;
+}
+
+header section {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(134, 129, 129, 0.7);
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+/* NAV BAR */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.navbar .links {
+    display: flex;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    margin: 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown_content a {
+    float: none;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+    background-color: #000;
+}
+
+/* RESPONSIVE MENU */
+.dropdown_menu {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 120px;
+    height: 0px;
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: scroll;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 40vh;
+}
+
+.dropdown_menu li {
+    display: flex;
+}
+
+.dropdown_menu li a {
+    font-size: .8rem;
+    padding: .7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown_menu .dropdown_content {
+    position: relative;
+}
+
+/* SCROLL BAR */
+.dropdown_menu   {
+    overflow-x: hidden;
+}
+
+/* WIDTH */
+.dropdown_menu::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* TRACK */
+.dropdown_menu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* HANDLE */
+.dropdown_menu::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius: 10px;
+}
+
+/* HANDLE OVER HOVER */
+.dropdown_menu::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 0, 83);
+}
+
+/* HEADER LOGO */
+.logo img {
+    max-width: 100px;
+    max-height: 100px;
+    background-color: #fff;
+    padding: .2rem;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 1rem .5rem;
+    background-color: #000;
+    color: white;
+    display: grid;
+    grid-template-areas:
+    "lg ct at"
+    "lg ct sl";
+    font-size: .5rem;
+}
+
+/* FOOTER SECTION GRID */
+footer h4 {
+    font-size: 1rem;
+}
+
+footer aside {
+    padding: 0 .5rem;
+}
+
+footer .org {
+    text-align: center;
+    grid-area: lg;
+}
+
+footer .contact_info {
+    grid-area: ct;
+}
+
+footer .about {
+    grid-area: at;
+}
+
+footer .contact_info table {
+    border-spacing: 5px;
+}
+
+footer .connect {
+    grid-area: sl;
+    font-size: medium;
+}
+
+/* INDEX MAIN */
+
+main div {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+main a {
+    background-color: rgb(255, 255, 255);
+    color: purple;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 2px;
+}
+
+main a:hover {
+    background-color: purple;
+    color: yellow;
+}
+
+main i {
+    color: purple;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+/* URGENT MESSAGE */
+.urgent_msg aside:nth-child(2) {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* INDEX MAIN JOIN NEWSPAPER */
+/* JOIN NEWSLETTER */
+.join_news section {
+    background-color: purple;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+.join_news aside:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: purple;
+    border-radius: 50px;
+}
+
+.join_news i {
+    color: purple;
+}
+
+.join_news p {
+    padding: .5rem 2rem;
+    text-align: center;
+}
+
+.join_news form {
+    padding-top: 1rem;
+    justify-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.join_news form input:nth-child(1) {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.join_news form input:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* CONTACT FORM FOR CONTACT PAGE */
+form{
+	width: 100%;
+	padding:  0.75rem;
+}
+
+input, label, textarea{
+	display: block;
+	width: calc(100% - 2rem);
+}
+
+input, textarea, select{
+	outline: 1px solid #222;
+	border: none;
+	border-radius: 0.2rem;
+}
+
+label{
+	font-size: 1.1rem;
+}
+
+.required{
+	color: #c71819;
+}
+
+input{
+	width: 90%;
+	margin: 0.25rem auto 0.5rem auto;
+	padding: 0.5em;
+}
+
+input:focus, select:focus, textarea:focus{
+	border: 2px inset #0a58ff;
+	box-shadow: 0 0 0 0.09rem currentColor;
+}
+
+input:error, select:error, textarea:error{
+	background-color: #c71819;
+}
+
+fieldset{
+	margin: 0.5rem auto;
+	padding-bottom: 0.5rem;
+	width: 94%;
+	border: 1px solid #222;
+	border-radius: 0.2rem;
+	display: grid;
+	grid-template-columns: 30px 1fr 30px 1fr;
+}
+
+legend{
+	padding: 0.5rem;
+}
+
+fieldset label{
+	display: inline;
+	width: 60%;
+}
+
+fieldset input{
+	display: inline;
+	width: 20px;
+}
+
+select{
+	display: block;
+	width: 95%;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+textarea{
+	width: 90%;
+	height: 100px;
+	margin: 0.25rem auto 0.5rem auto;
+	padding: 0.5rem;
+}
+
+input[type="radio"]{
+	margin-top: 0.4rem;
+	outline: none;
+	border: 1px solid #222;
+	border-radius: 25%;
+}
+
+input[type="submit"]{
+	font-size: 1.2rem;
+	width: 95%;
+	margin-top: 1rem;
+	padding: 0.5rem;
+	border: none;
+	outline: none;
+	border-radius: 0.2rem;
+	background-color: purple;
+	color: white;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus{
+	background-color: #063599;
+	filter: drop-shadow(8px 8px 4px #777);
+}
+
+/* CONTACT FORM MESSAGE */
+.contact_container {
+    padding: unset;
+    border: 2px solid #777;
+	border-radius: 0.2rem;
+}
+
+.contact_msg {
+    background-color: purple;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.contact_msg div {
+    text-align: center;
+    border: unset;
+}
+
+.contact_msg div i {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem;
+}
+
+.contact_msg h3 {
+    font-size: 2.5rem;
+}
+
+.contact_msg p {
+    padding: .5rem 0;
+    font-size: 1.2rem;
+}
+
+/* ADOPTABLE DOG MAIN SECTION */
+.adopt_dogs figure {
+    margin: 1rem 0;
+}
+.adopt_title a {
+    font-size: 1.5rem;
+}
+
+.adopt_title p {
+    text-align: center;
+}
+
+.adopt_dogs figure {
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.adopt_dogs figure img {
+    width: 90%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.adopt_dogs figure table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.adopt_dogs figcaption {
+    padding: .5rem;
+}
+
+.adopt_dogs table caption {
+    text-transform: uppercase;
+    font-family: "Merriweather", sans-serif;
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.adopt_dogs figure table th {
+    text-align: left;
+}
+
+.adopt_dogs figure table td {
+    text-align: right;
+}
+
+
+
+
+/* DEVICES SMALLER THAN 767PX */
+@media only screen and (max-width: 767px) {
+    /* FULL WIDTH ON SMALL SCREEN */
+    body {
+        width: 100%;
+    }
+
+    /* RRESPONSIVE MENU */
+    .navbar .links, .navbar .action_btn {
+        display:none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+        left: 2rem;
+        width: unset;
+    }
+
+    /* RESPONSIVE FOOTER */
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "at ct"
+        "lg lg"
+        "sl sl";
+    }
+
+    footer .org {
+        grid-area: lg;
+        padding-top: 1rem ;
+        border-top: 2px solid white;
+    }
+
+    footer .contact_info {
+        grid-area: ct;
+        border-left: 2px solid white;
+    }
+
+    footer .about {
+        grid-area: at;
+        text-align: end;
+        width: 50%;
+        margin-left: auto;
+    }
+
+    footer .about p {
+        padding-top: .2rem;
+    }
+
+    footer .connect {
+        grid-area: sl;
+        text-align: center;
+    }
+
+    /* MAIN CONTENT */
+    main article {
+        padding-bottom: 1.5rem;
+    }
+
+    /* QUICK LINKS */
+    .q_links section {
+        padding: 1.5rem 0;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+
+    .q_links section p {
+        padding: 1rem;
+    }
+
+}
+
+/* DEVICE SCREEN LARGER THAN 768 */
+@media only screen and (min-width: 768px) {
+
+    /* READJUST LINKS SIZE */
+    .links a {
+        font-size: .6rem;
+    }
+
+    /* INDEX MAIN ARTICLES SPACING */
+    main article {
+        padding: 1rem;
+    }
+
+    /* INDEX MAIN QUICK LINKS  */
+    .q_links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .q_links h2 {
+        grid-column: 1 / 3;
+        padding-bottom: 1rem;
+    }
+
+    .q_links section {
+        padding: 1rem;
+    }
+
+    .q_links section p {
+        padding: 1rem 1rem;
+    }
+
+    .q_links section:nth-child(2) {
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    .q_links section:nth-child(3) {
+        border-bottom: 2px solid black;
+    }
+
+    .q_links section:nth-child(4) {
+        border-right: 2px solid black;
+    }
+
+    /* READJUST INDEX NEWSLETTER SECTION WIDTH */
+    .join_news section {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    /* RESPONSIVE ADOPTABLE DOGS FIGURE */
+    .adopt_dogs figure {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 15px;
+    }
+
+    .adopt_dogs figure img {
+        grid-row: 1 / 3;
+    }
+
+    .adopt_dogs figure div {
+        grid-column: 2 / 3;
+        display: flex;
+        height: 60%;
+    }
+
+    .adopt_dogs figure div a {
+        font-size: .8rem;
+    }
+
+}
+
+/* DEVICE SCREEN LARGER THAN 992 */
+@media only screen and (min-width: 992px) {
+
+    /* READJUST LINKS SIZE */
+    .links a {
+        font-size:.8rem;
+    }
+
+    /* INDEX MAIN URGENT MESSAGE */
+    .urgent_msg aside {
+        text-align: center;
+    }
+
+    .urgent_msg aside p {
+        padding: 0 1rem;
+    }
+
+    /* INDEX MAIN QUICK LINKS */
+    .q_links {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .q_links section {
+        padding: .5rem ;
+        border-right: 2px solid ;
+    }
+
+    .q_links h2 {
+        grid-column: 1 / 5;
+    }
+
+    .q_links section div {
+        width: 90%;
+    }
+
+    .q_links section i {
+        font-size: 1.2rem;
+    }
+
+    .q_links section:nth-child(2) {
+        border-bottom: unset;
+    }
+
+    .q_links section:nth-child(3) {
+        border-bottom: unset;
+    }
+
+    .q_links section:nth-child(5) {
+        border-right: unset;
+    }
+
+    /* RESPONSIVE FORM CONTAINER */
+    .contact_container {
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* RESPONSIVE ADOPTABLE DOGS FIGURE */
+    .adopt_dogs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .adopt_dogs figure {
+        display:  unset;
+    }
+
+    .adopt_dogs figure div {
+        height: unset;
+    }
+
+
+}
