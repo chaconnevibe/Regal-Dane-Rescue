@@ -1,3 +1,14 @@
+:root {
+    --purple: #743282;
+    --yellow: #FFDF00;
+    --black: #221E24;
+    --white: #fff;
+    --ltblue: #66CCCC;
+    --ltpurple: #B668A1;
+    --grey: #D6D5C9;
+}
+
+
 *,
 *::before,
 *::after {
@@ -47,12 +58,12 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 a:hover, .dropbtn:hover, .dropdown_content a:hover {
-    color: purple;
-    background-color: #fff;
+    color: var(--purple);
+    background-color: var(--white);
     cursor: pointer;
 }
 
@@ -67,7 +78,7 @@ header {
     margin: 0;
     height: max-content;
     background-position: center;
-    background-color: #000;
+    background-color: var(--black);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -80,7 +91,7 @@ header section {
     width: 100%;
     text-align: center;
     background-color: rgb(134, 129, 129, 0.7);
-    color: #fff;
+    color: var(--white);
     padding: 1rem 1rem;
 }
 
@@ -100,7 +111,7 @@ header section {
 }
 
 .navbar .toggle_btn {
-    color: #fff;
+    color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
@@ -111,7 +122,7 @@ header section {
     outline: none;
     margin: 0;
     background-color: transparent;
-    color: #fff;
+    color: var(--white);
 }
 
 .dropdown_content {
@@ -125,7 +136,7 @@ header section {
 
 .dropdown:hover .dropdown_content {
     display: block;
-    background-color: #000;
+    background-color: var(--black);
 }
 
 /* RESPONSIVE MENU */
@@ -181,7 +192,7 @@ header section {
 
 /* HANDLE */
 .dropdown_menu::-webkit-scrollbar-thumb {
-    background: purple;
+    background: var(--purple);
     border-radius: 10px;
 }
 
@@ -194,7 +205,7 @@ header section {
 .logo img {
     max-width: 100px;
     max-height: 100px;
-    background-color: #fff;
+    background-color: var(--white);
     padding: .2rem;
 }
 
@@ -203,8 +214,8 @@ footer {
     width: 100%;
     margin-top: auto;
     padding: 1rem .5rem;
-    background-color: #000;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     display: grid;
     grid-template-areas:
     "lg ct at"
@@ -245,15 +256,15 @@ footer .connect {
 
 /* INDEX MAIN */
 main div {
-    border: 1px solid black;
+    border: 1px solid var(--black);
     border-radius: 20px;
     width: 40%;
     margin: 0 auto;
 }
 
 main a {
-    background-color: rgb(255, 255, 255);
-    color: purple;
+    background-color: var(--white);
+    color: var(--purple);
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
@@ -263,12 +274,12 @@ main a {
 }
 
 main a:hover {
-    background-color: purple;
-    color: yellow;
+    background-color: var(--purple);
+    color: var(--yellow);
 }
 
 main i {
-    color: purple;
+    color: var(--purple);
     font-size: 2em;
     letter-spacing: 3px;
 }
@@ -282,8 +293,8 @@ main i {
 /* INDEX MAIN JOIN NEWSPAPER */
 /* JOIN NEWSLETTER */
 .join_news section {
-    background-color: purple;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--white);
     padding: 1rem;
     border-radius: 50px;
 }
@@ -293,13 +304,13 @@ main i {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: #fff;
-    color: purple;
+    background-color: var(--white);
+    color: var(--purple);
     border-radius: 50px;
 }
 
 .join_news i {
-    color: purple;
+    color: var(--purple);
 }
 
 .join_news p {
@@ -317,14 +328,14 @@ main i {
 }
 
 .join_news form input:nth-child(1) {
-    border: 1px solid black;
+    border: 1px solid var(--black);
     border-radius: 25px;
     padding: 5px;
 }
 
 .join_news form input:nth-child(2) {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 25px;
     padding: 10px;
     cursor: pointer;
@@ -362,7 +373,7 @@ input{
 }
 
 input:focus, select:focus, textarea:focus{
-	border: 2px inset #0a58ff;
+	border: 2px inset var(--ltpurple);
 	box-shadow: 0 0 0 0.09rem currentColor;
 }
 
@@ -412,7 +423,7 @@ textarea{
 input[type="radio"]{
 	margin-top: 0.4rem;
 	outline: none;
-	border: 1px solid #222;
+	border: 1px solid var(--black);
 	border-radius: 25%;
 }
 
@@ -424,25 +435,25 @@ input[type="submit"]{
 	border: none;
 	outline: none;
 	border-radius: 0.2rem;
-	background-color: purple;
-	color: white;
+	background-color: var(--purple);
+	color: var(--white);
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus{
-	background-color: #063599;
-	filter: drop-shadow(8px 8px 4px #777);
+	background-color: var(--ltpurple);
+	filter: drop-shadow(8px 8px 4px var(--grey));
 }
 
 /* CONTACT FORM MESSAGE */
 .contact_container {
     padding: unset;
-    border: 2px solid #777;
+    border: 2px solid var(--grey);
 	border-radius: 0.2rem;
 }
 
 .contact_msg {
-    background-color: purple;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--white);
     padding: 1.5rem;
 }
 
@@ -452,7 +463,7 @@ input[type="submit"]:hover, input[type="submit"]:focus{
 }
 
 .contact_msg div i {
-    color: #fff;
+    color: var(--white);
     font-size: 2.5rem;
     padding: .5rem;
 }
@@ -467,9 +478,11 @@ input[type="submit"]:hover, input[type="submit"]:focus{
 }
 
 /* ADOPTABLE DOG MAIN SECTION */
-.adopt_dogs figure {
-    margin: 1rem 0;
+.adopt_title {
+    width: 50%;
+    margin: 0 auto;
 }
+
 .adopt_title a {
     font-size: 1.5rem;
 }
@@ -479,7 +492,8 @@ input[type="submit"]:hover, input[type="submit"]:focus{
 }
 
 .adopt_dogs figure {
-    border: 2px solid black;
+    margin: 1rem 0;
+    border: 2px solid var(--black);
     padding: 1rem;
     border-radius: 5px;
 }
@@ -552,12 +566,12 @@ input[type="submit"]:hover, input[type="submit"]:focus{
     footer .org {
         grid-area: lg;
         padding-top: 1rem ;
-        border-top: 2px solid white;
+        border-top: 2px solid var(--white);
     }
 
     footer .contact_info {
         grid-area: ct;
-        border-left: 2px solid white;
+        border-left: 2px solid var(--white);
     }
 
     footer .about {
@@ -585,7 +599,7 @@ input[type="submit"]:hover, input[type="submit"]:focus{
     .q_links section {
         padding: 1.5rem 0;
         align-items: center;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--black);
     }
 
     .q_links section p {
@@ -627,16 +641,16 @@ input[type="submit"]:hover, input[type="submit"]:focus{
     }
 
     .q_links section:nth-child(2) {
-        border-bottom: 2px solid black;
-        border-right: 2px solid black;
+        border-bottom: 2px solid var(--black);
+        border-right: 2px solid var(--black);
     }
 
     .q_links section:nth-child(3) {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--black);
     }
 
     .q_links section:nth-child(4) {
-        border-right: 2px solid black;
+        border-right: 2px solid var(--black);
     }
 
     /* READJUST INDEX NEWSLETTER SECTION WIDTH */
