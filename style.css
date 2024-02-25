@@ -209,7 +209,7 @@ footer {
     grid-template-areas:
     "lg ct at"
     "lg ct sl";
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 /* FOOTER SECTION GRID */
@@ -240,11 +240,10 @@ footer .contact_info table {
 
 footer .connect {
     grid-area: sl;
-    font-size: medium;
+    font-size: 1.5rem;
 }
 
 /* INDEX MAIN */
-
 main div {
     border: 1px solid black;
     border-radius: 20px;
