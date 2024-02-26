@@ -744,7 +744,7 @@ input[type="submit"]:hover, input[type="submit"]:focus{
     .adopt_dogs {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .adopt_dogs figure {
